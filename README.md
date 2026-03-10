@@ -1,136 +1,148 @@
-🧠 Self-Healing Developer Agent
+<p align="center"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*0s5s8a7m8Jrj9r6p9FvG5w.png" alt="AI Developer Agent Banner" width="100%"> </p> <h1 align="center">🤖 Self-Healing Developer Agent</h1> <p align="center"> <em>An AI-powered debugging assistant that detects coding errors and automatically heals them</em> </p> <p align="center"> <em>Built with ❤️ by <strong>Iniyan</strong>, <strong>Abi</strong>, <strong>Maddie</strong>, and <strong>Nila</strong></em> </p>
+👨‍💻 Team Members
+<p align="center"> <strong>👤 Iniyan</strong> – Backend Development & Agent Logic<br> <strong>🤖 Abi</strong> – AI Prompt Engineering & Model Integration<br> <strong>⚙ Maddie</strong> – System Integration & Testing<br> <strong>🎨 Nila</strong> – Frontend UI/UX Development </p>
+🧭 Project Overview
 
-🚀 An Autonomous AI Debugging Assistant that detects code errors, analyzes them using AI, and automatically generates fixes.
+Self-Healing Developer Agent is an intelligent AI system that automatically detects coding errors, analyzes the root cause, and suggests or applies fixes using AI.
 
-This project introduces an AI-powered developer assistant that monitors code execution, identifies runtime errors, and proposes intelligent fixes using Google AI Studio.
+The system acts like a smart debugging assistant that monitors program execution and repairs code with developer approval.
 
-The agent behaves like a self-healing system for software projects — detecting bugs and repairing them with minimal developer intervention.
+🧠 Key Objectives
 
-✨ Key Features
+Reduce developer debugging time
 
-🔍 Command Monitoring
-Wraps standard CLI commands and captures execution logs.
+Automatically detect runtime errors
 
+Generate AI-powered code fixes
+
+Improve developer productivity
+
+Create a safer debugging workflow
+
+🔄 System Workflow
+<p align="center"> <img src="https://miro.medium.com/v2/resize:fit:1200/1*2YkYyqS-gtnznuaCG2lLBg.png" width="85%"> </p>
+Workflow Steps
+
+1️⃣ Developer Command Execution
+The developer runs a command through the agent.
+
+2️⃣ Error Detection
+If the command fails, the system captures the error logs.
+
+3️⃣ AI Error Analysis
+The AI model analyzes the error and identifies the root cause.
+
+4️⃣ Patch Generation
+AI generates a code patch to fix the error.
+
+5️⃣ User Confirmation
+The developer reviews the suggested fix.
+
+6️⃣ Automatic Code Healing
+If approved, the agent applies the fix and reruns the program.
+
+🌟 Core Features
 🐞 Automatic Error Detection
-Detects failures whenever a command exits with a non-zero status.
+<p align="center"> <img src="https://miro.medium.com/v2/resize:fit:1200/1*8VZVxDSHLVQQP4Jrped1Zg.png" width="70%"> </p>
 
-🤖 AI Error Analysis
-Uses Gemini AI to analyze stack traces and identify root causes.
+The system monitors developer commands and detects errors such as:
 
-🩹 Smart Patch Generation
-Generates code fixes in unified diff format.
+Python Tracebacks
 
-🛡 Safe Code Modification
-Creates automatic .bak backups before applying fixes.
+Syntax Errors
 
-🖥 Interactive Debug Dashboard
-Web-based interface to visualize errors and approve fixes.
+API Errors (401 / 500)
 
-⚡ Auto Verification
-After applying a fix, the agent automatically re-runs the code to confirm the issue is resolved.
+Missing Dependencies
 
-📸 Project Demo
-🐞 Error Detection
+🤖 AI-Powered Debugging
+<p align="center"> <img src="https://miro.medium.com/v2/resize:fit:1200/1*3Q6kVbUaz2YsmiVjCwXTlz.png" width="70%"> </p>
 
-Example error detected by the system:
+The system integrates with
+Google AI Studio
 
-The agent detects:
+The AI performs:
 
-ModuleNotFoundError: No module named 'request'
-🤖 AI Fix Suggestion
+Error explanation
 
-The AI agent analyzes the issue and proposes a patch:
+Root cause analysis
 
--import request
-+import requests
-🛠 Code Healing
+Code fix generation
 
-After user approval, the agent applies the fix automatically.
+Patch creation
 
-⚙️ System Workflow
+🩹 Smart Code Healing
 
-The Self-Healing Agent follows this intelligent debugging workflow:
+Example detected error:
 
-Developer runs command
-        │
-        ▼
-Agent executes program
-        │
-        ▼
-Error detected
-        │
-        ▼
-Error logs sent to AI
-        │
-        ▼
-AI analyzes root cause
-        │
-        ▼
-AI generates code patch
-        │
-        ▼
-Developer reviews fix
-        │
-        ▼
-Fix applied automatically
-        │
-        ▼
-Program re-runs to verify success
-🏗 Project Architecture
-self-healing-agent/
-│
-├── examples/                # Demo buggy applications
-│   ├── buggy_app.py         # ModuleNotFoundError demo
-│   ├── math_error.py        # TypeError demo
-│   └── file_error.py        # FileNotFoundError demo
-│
-├── server.ts                # Express backend (command execution & file ops)
-│
-├── src/
-│   ├── App.tsx              # React debugging dashboard
-│   └── main.tsx             # Application entry point
-│
-├── package.json             # Project dependencies
-└── README.md                # Project documentation
-🚀 Getting Started
-1️⃣ Configure Gemini API
-
-Set your API key in the environment:
-
-GEMINI_API_KEY=your_api_key
-
-The project integrates with
-Google AI Studio.
-
-2️⃣ Start the Dashboard
-
-Run the project inside your development environment.
-
-The dashboard will automatically launch.
-
-3️⃣ Run the Demo
-
-Select Buggy App from command presets
-
-Click RUN
-
-The agent detects the error
-
-AI suggests a fix
-
-Click APPLY FIX
-
-The code heals automatically 🎉
-
-🧪 Example Debug Scenario
-Buggy Code
 import request
 response = request.get("https://api.example.com")
-Error
+
+Error:
+
 ModuleNotFoundError: No module named 'request'
-AI Fix
+
+AI generated patch:
+
 -import request
 +import requests
+
+The developer can approve the fix and the agent automatically heals the code.
+
+🖥 Interactive Debugging Dashboard
+
+The project includes a web-based dashboard built with:
+
+React
+
+Tailwind CSS
+
+Framer Motion
+
+The dashboard shows:
+
+Error logs
+
+AI explanations
+
+Patch previews
+
+Fix approval button
+
+💡 Project Workflow
+Developer runs command
+        ↓
+Agent executes program
+        ↓
+Error detected
+        ↓
+Error logs sent to AI
+        ↓
+AI analyzes root cause
+        ↓
+AI generates patch
+        ↓
+Developer reviews fix
+        ↓
+Patch applied automatically
+        ↓
+Program re-runs to verify fix
+🏗 Project Structure
+self-healing-agent/
+│
+├── examples/
+│   ├── buggy_app.py
+│   ├── math_error.py
+│   └── file_error.py
+│
+├── server.ts
+│
+├── src/
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── package.json
+└── README.md
 🧰 Technology Stack
 Backend
 
@@ -146,55 +158,33 @@ Tailwind CSS
 
 Framer Motion
 
-AI
+AI Integration
 
 Google AI Studio
 
-Diff Engine
+Diff Visualization
 
 diff library
 
 🔐 Safety & Security
 
+✔ AI fixes require developer approval
+✔ Automatic .bak backups created before modification
 ✔ File operations restricted to project directory
-✔ AI fixes require user approval
-✔ Automatic .bak backups before modifications
-✔ Command execution sandboxed
+✔ Safe command execution environment
 
-👨‍💻 Team Members
-
-This project was developed by:
-
-Name	Role
-Iniyan	Backend Development & Agent Logic
-Abi	AI Prompt Engineering
-Maddie	System Integration & Testing
-Nila	Frontend UI/UX Development
-🎯 Project Vision
-
-The Self-Healing Developer Agent aims to become an AI-powered debugging companion that:
-
-✔ Detects software errors automatically
-✔ Suggests intelligent fixes
-✔ Repairs code safely
-✔ Improves developer productivity
-
-⭐ Future Improvements
+🚀 Future Improvements
 
 Multi-language debugging (Python, JavaScript, Java)
 
-Automatic dependency installation
+Auto dependency installation
 
-Git commit automation
+Git auto commit after fixes
 
 Debugging analytics dashboard
 
-AI-generated unit tests
+AI generated unit tests
 
-🌟 Support the Project
+⭐ Project Vision
 
-If you like this project:
-
-⭐ Star the repository
-🐛 Report issues
-🚀 Contribute improvements
+The Self-Healing Developer Agent aims to become a next-generation AI developer assistant that automatically detects and fixes coding errors, helping developers focus on building better software.
