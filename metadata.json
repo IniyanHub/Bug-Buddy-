@@ -1,0 +1,5 @@
+{
+  "name": "Self-Healing Developer Agent",
+  "description": "An autonomous AI agent that monitors code execution, detects errors, and automatically generates and applies fixes using Google Gemini.",
+  "requestFramePermissions": []
+}
